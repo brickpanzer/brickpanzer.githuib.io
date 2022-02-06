@@ -2,22 +2,63 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <style>
+      .sidenav {
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        padding: 10px;
+        top: 0;
+        left: 0;
+      }
+      .content {
+        margin-left: 200px;
+        text-align: center;
+      }
 
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        min-width: 180px;
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        display: block;
+      }
+
+      .dropdown:hover .dropdown-content {display: block;}
+    </style>
     <title>Casey Gossett</title>
   </head>
   <body>
-      <div style="display: flexbox; text-align: center;">
-        <p>
-            Casey Gossett<br>
-            Any/All Pronouns<br>
-            Tea Drinker | Taoist | Antifascist<br>
-            Taking this course to learn how to do web the right way,<br>
-            because whatever I had learned before was not working<br>
-            lmao<br>
-        </p>
-        <a href="img/Angry.jpg">image</a>
-        <br>
-        <a href="https://youtu.be/KeEmoIO-Iok">video</a>
+    <div class="sidenav">
+      <div class="dropdown">
+        <button class="dropdown-button">ATLS 2200 Assignments</button>
+        <div class="dropdown-content">
+          <a href="assignment1.html">Assignment 1</a>
+          <a href="assignment3.html">Assignment 3</a>
+          <a href="assignment4.html">Assignment 4</a>
+        </div>
       </div>
+    </div>
+    <div class="content">
+      <p>
+          Casey Gossett<br>
+          Any/All Pronouns<br>
+          Tea Drinker | Taoist | Antifascist<br>
+          Taking this course to learn how to do web the right way,<br>
+          because whatever I had learned before was not working<br>
+          lmao<br>
+      </p>
+      <a href="img/Angry.jpg">image</a>
+      <br>
+      <a href="https://youtu.be/KeEmoIO-Iok">video</a>
+    </div>
   </body>
 </html>
