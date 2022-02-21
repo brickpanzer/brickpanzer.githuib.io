@@ -1,0 +1,133 @@
+@font-face {
+    font-family: "Chakra Petch";
+    src: url(font/ChakraPetch-Medium.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Chakra Petch";
+    src: url(font/ChakraPetch-MediumItalic.ttf);
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: "iCollect-it";
+    src: url(font/icollect-it.otf);
+}
+@font-face {
+    font-family: "squid";
+    src: url(font/squid.otf);
+}
+
+body {
+    background-color: #55545D;
+}
+
+a {
+    text-decoration: none;
+    font-family: "Chakra Petch";
+    font-style: italic;
+    font-size: 1vw;
+    color: #FEE031;
+}
+a:hover {
+    color: #FFFBE3;
+}
+a:visited {
+    color:#2b2b2b;
+}
+
+.sidenav {
+    border-style: none double none none;
+    border-width: 6px;
+    border-color: #FFFBE3;
+    background-color: #55545D;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    padding: 10px;
+    top: 0;
+    left: 0;
+}
+
+.content {
+    margin-left: 300px;
+    text-align: center;
+}
+
+.content h1{
+    font-family: "iCollect-it";
+    font-size: 10vw;
+    font-weight: lighter;
+    color: #FFFBE3;
+    margin: 0;
+}
+
+.content h2{
+    text-align: right;
+    margin: 0;
+    padding-left: 30px;
+    font-family: "squid";
+    font-weight: lighter;
+    font-size: 4vw;
+    color: #FFFBE3;
+}
+
+.content p{
+    font-family: "Chakra Petch";
+    font-size: 1vw;
+    color: #FFFBE3;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    height: 120px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.dropdown-button {
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+    border-width: 6px;
+    border-style: dashed;
+    border-color: #FEE031;
+    background-color: #55545D;
+    font-family: "iCollect-it";
+    font-size: 45px;
+    color: #FFFBE3;
+    text-align: left;
+    line-height: 180px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 180px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    border-style: none none none solid;
+    border-radius: 0;
+    border-width: 6px;
+    border-color: #FFFBE3;
+    padding-left: 10px;
+    margin-top: 30px;
+    color:#FFFBE3
+}
+
+.dropdown:hover {
+    margin-bottom: 400px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
