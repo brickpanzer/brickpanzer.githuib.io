@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMBRA MAG</title>
+    <style>
+        @font-face {
+            font-family: "Metlatch";
+            src: url(rsc/typ/Mettlach.otf);
+        }
+        @font-face {
+            font-family: "Raleway";
+            src: url(rsc/typ/Raleway-Light.ttf);
+        }
+        .directory-button {
+            font-family: Raleway;
+            font-size: 25px;
+            width: 200px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: white;
+            border-bottom: 3px;
+        }
+        .fuck-these tr {
+            height: 50px;
+            margin: 20px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<!-- can't wait to never do inline styling ever again this shit cursed lol -->
+<body style="margin:0px; background-color: black; color: white;">
+    <div id="top-bar" style="display: flex; flex-direction: row;">
+        <h1 style="font-family:Metlatch; 
+                   font-size: 300px; 
+                   margin: 10px;
+                   position:fixed;
+                   top: -70px;
+                   z-index: 1;">UMBRA</h1>
+        <h2 style="position:relative;
+                   top:265px;
+                   left:25px;
+                   font-family: Raleway;
+                   font-size: 30px;
+                   color: #F04100;
+                   letter-spacing: 40px;
+                   z-index: 1;">MAGAZINE</h2>
+        <div id="nav-bar" style="background-color: #05050593;
+                                border-bottom-color: white;
+                                border-bottom-style:solid ;
+                                border-width: 3px; 
+                                 width: 100vw;
+                                 height: 160px;
+                                 position:fixed;
+                                 margin: 0px;
+                                 top:85px;
+                                 z-index: 0;
+                                 display: flex;
+                                 flex-direction: row;
+                                 align-items: center;">
+            <div id="directory" style="color: white;
+                                        display: flex;
+                                        flex-direction: row;
+                                        justify-content: space-between;
+                                        width: 60vw;
+                                        margin: 20px; 
+                                        height: 100px;
+                                        position: fixed;
+                                        right: 0px;">
+                <div class="directory-button"><i class="material-icons">keyboard_arrow_down</i>dropdown 1</div>
+                <div class="directory-button"><i class="material-icons">keyboard_arrow_down</i>dropdown 2</div>   
+                <div class="directory-button"><i class="material-icons">keyboard_arrow_down</i>dropdown 3</div>         
+            </div> 
+        </div>
+    </div>
+    <div id="background" style="position: fixed;
+                                top: 0px;
+                                left: 0px;
+                                height: 100vh;
+                                min-width: 100vw;
+                                z-index: -1;">
+        <img src="rsc/img/img1.png" alt="" style="height: 100%; object-fit: fill; opacity: 50%;">
+    </div>
+    <div id="color-table" style="position: fixed;
+                                top: 400px;
+                                left: 50px;
+                                display: flex;
+                                align-items: center;
+                                font-family: Raleway;
+                                letter-spacing: 5px;">
+        <table class="fuck-these">
+            <tbody>
+                <tr id="row-1">
+                    <th style="background-color: #F04100; width: 54px;"></th>
+                    <th style="width: 200px;">Hex #F04100</th>
+                    <th style="width: 200px;">RGB 240, 65, 0</th>
+                </tr>
+                <tr id="row-2">
+                    <th style="background-color:white; width: 54px;"></th>
+                    <th style="width: 200px;">Hex #FFFFFF</th>
+                    <th style="width: 200px;">RGB 256, 256, 256</th>
+                </tr>
+                <tr id="row-3">
+                    <th style="background-color: #8F7368; width: 54px;"></th>
+                    <th style="width: 200px;">Hex #F04100</th>
+                    <th style="width: 200px;">RGB 240, 65, 0</th>
+                </tr>
+                <tr id="row-4">
+                    <th style="background-color: #1C1411; width: 54px;"></th>
+                    <th style="width: 200px;">Hex #F04100</th>
+                    <th style="width: 200px;">RGB 240, 65, 0</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
