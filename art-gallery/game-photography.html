@@ -4,9 +4,110 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Casey Gossett</title>
+    <style>
+        body {
+            margin: 0px;
+            min-height: 100vh;
+        }
+        ul {
+            list-style-type: none;
+        }
+        #gallery {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+        #gallery > #gallery-li{
+            margin: 0px;
+            width: 90%;
+            height: 90%;
+            display: grid;
+            grid-template-rows: repeat(5,400px);
+            grid-template-columns: repeat(auto-fit,400px);
+            grid-auto-flow: dense;
+            justify-content: center;
+        }
+        #gallery > #gallery-li > li > figure {
+            margin: 0px;
+            height: 100%;
+            width: 100%;
+        }
+        #gallery > #gallery-li > li > figure > a{
+            margin: 0px;
+            height: 100%;
+            width: 100%;
+        }
+        #gallery > #gallery-li > li > figure > a > img {
+            width: 100%;
+            height: 100%;
+            object-fit:cover;
+        }
+        img:hover {
+            opacity: 0.5;
+        }
+        #signature {
+            width: 200px;
+            transform-origin: bottom left;
+            transform: rotate(-90deg);
+            position: fixed;
+            bottom: 50px;
+            right: -150px;
+        }
+        #signature img{
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="gallery">
+        <ul id="gallery-li">
+            <li><figure>
+                <a href="../rsc/img/art-gallery/game-photography/0.jpg" target="_blank"><img src="../rsc/img/art-gallery/game-photography/0.jpg" alt=""></a>
+            </figure></li>
+            <li><figure>
+                <a href="../rsc/img/art-gallery/game-photography/1.jpg" target="_blank"><img src="../rsc/img/art-gallery/game-photography/1.jpg" alt=""></a>
+            </figure></li>
+            <li><figure>
+                <a href="../rsc/img/art-gallery/game-photography/2.png" target="_blank"><img src="../rsc/img/art-gallery/game-photography/2.png" alt=""></a>
+            </figure></li>
+            <li><figure>
+                <a href="../rsc/img/art-gallery/game-photography/3.png" target="_blank"><img src="../rsc/img/art-gallery/game-photography/3.png" alt=""></a>
+            </figure></li>
+            <li><figure>
+                <a href="../rsc/img/art-gallery/game-photography/4.jpg" target="_blank"><img src="../rsc/img/art-gallery/game-photography/4.jpg" alt=""></a>
+            </figure></li>
+            <li><figure>
+                <a href="../rsc/img/art-gallery/game-photography/5.png" target="_blank"><img src="../rsc/img/art-gallery/game-photography/5.png" alt=""></a>
+            </figure></li>
+            <li><figure>
+                <a href="../rsc/img/art-gallery/game-photography/6.png" target="_blank"><img src="../rsc/img/art-gallery/game-photography/6.png" alt=""></a>
+            </figure></li>
+            <li><figure>
+                <a href="../rsc/img/art-gallery/game-photography/7.png" target="_blank"><img src="../rsc/img/art-gallery/game-photography/7.png" alt=""></a>
+            </figure></li>
+            <li><figure>
+                <a href="../rsc/img/art-gallery/game-photography/8.png" target="_blank"><img src="../rsc/img/art-gallery/game-photography/8.png" alt=""></a>
+            </figure></li>
+            <li><figure>
+                <a href="../rsc/img/art-gallery/game-photography/9.jpg" target="_blank"><img src="../rsc/img/art-gallery/game-photography/9.jpg" alt=""></a>
+            </figure></li>
+            <li><figure>
+                <a href="../rsc/img/art-gallery/game-photography/a.png" target="_blank"><img src="../rsc/img/art-gallery/game-photography/a.png" alt=""></a>
+            </figure></li>
+            <li><figure>
+                <a href="../rsc/img/art-gallery/game-photography/b.png" target="_blank"><img src="../rsc/img/art-gallery/game-photography/b.png" alt=""></a>
+            </figure></li>
+            <li><figure>
+                <a href="../rsc/img/art-gallery/game-photography/c.jpg" target="_blank"><img src="../rsc/img/art-gallery/game-photography/c.jpg" alt=""></a>
+            </figure></li>
+        </ul>
+    </div>
+    <div id="signature"><img src="../rsc/img/Brickwork-cream-nameonly.png" alt=""></div>
 </body>
 </html>

@@ -4,9 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Casey Gossett</title>
+    <style>
+        body {
+            margin: 0px;
+            background-color: black;
+        }
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+        #gallery {
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        #signature {
+            width: 200px;
+            transform-origin: bottom left;
+            transform: rotate(-90deg);
+            position: fixed;
+            bottom: 50px;
+            right: -150px;
+        }
+        #signature img{
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="gallery">
+        <img src="../rsc/img/art-gallery/3d-modeling/0.png" alt="">
+        <img src="../rsc/img/art-gallery/3d-modeling/1.jpg" alt="">
+        <img src="../rsc/img/art-gallery/3d-modeling/2.png" alt="">
+        <img src="../rsc/img/art-gallery/3d-modeling/3.png" alt="">
+    </div>
+    <div id="signature"><img src="../rsc/img/Brickwork-cream-nameonly.png" alt=""></div>
 </body>
 </html>
