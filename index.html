@@ -4,52 +4,161 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ex2</title>
+    <title>Casey Gossett</title>
     <style>
         @font-face {
-            font-family: "Giga";
-            src: url('rsc/typ/Giga.otf');
+            font-family: "i-collect-it";
+            src: url(rsc/typ/icollect-it.otf);
+        }
+        @font-face {
+            font-family: "Ferrite-Core-DX";
+            src: url(rsc/typ/FerriteCoreDX-Display.otf);
+            font-weight: bold;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: "Ferrite-Core-DX";
+            src: url(rsc/typ/FerriteCoreDX-Light.otf);
+            font-weight: lighter;
+            font-style: normal;
         }
         body {
-            background-color: #333333;
+            margin: 0px;
         }
         hr {
-            width: 50vw; 
-            height: 3px; 
-            background-color:white;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            color: #FFFBE3;
+            width: 100%;
         }
-        .content {
-            display: flex; 
-            align-items: center; 
-            justify-content: center ; 
-            flex-direction: column; 
-            color: white;
+        #top-bar {
+            width: 100vw;
+            height: 200px;
+            display: flex;
+            flex-direction: row;
+            z-index: 1;
         }
-        a:link {
-           color: white; 
+        #logo {
+            height: 300px;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            margin: 20px;
+            z-index: 1;
         }
-        a:visited {
-            color: #999999;
+        #name {
+            font-family: "i-collect-it";
+            font-size: 200px;
+            color: #FFFBE3;
+            position: relative;
+            top: -30px;
+            left: 250px;
+        }
+        #nav-bar {
+            height: 100px;
+            width: 80vw;
+            position: fixed;
+            top: 160px;
+            left: 250px;
+        }
+        #nav-bar-items {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .nav-dropdown {
+            position: relative;
+            display: inline-block;
+            font-family: "Ferrite-Core-DX";
+            font-weight: bold;
+            color: #FFFBE3;
+            font-size: 30px;
+            letter-spacing: 3px;
+        }
+        .nav-dropdown-content{
+            display: none;
+            position: absolute;
+        }
+        .nav-dropdown:hover .nav-dropdown-content{
+            display: flex;
+            flex-direction: column;
+        }
+        .nav-dropdown-content a{
+            color: #FFFBE3;
+            text-decoration: none;
+            font-weight: lighter;
+            letter-spacing: -2px;
+        }
+        .nav-dropdown-content a:visited{
+            color: #aba793;
+        }
+        .nav-dropdown-content a:hover{
+            color: #FEE031;
+        }
+        #background {
+            background-color: black;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            height: 100vh;
+            width: 100vw;
+            z-index: -1;            
+        }
+        #content {
+            width: 100vw;
+            min-height: 100vh;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            z-index: 0;
         }
     </style>
 </head>
 <body>
-    <div class="content">
-        <img src="rsc/img/me.jpg" alt="" style="border-radius: 434px;">
-        <p style="font-family: Giga; font-size: 50px; margin: 5px;">casey gossett any/all</p>
-        <h1>Pictured Above; <em> My true, divine form. Be not affraid</em></h1>
-        <hr>
-        <h3>Assorted Hobbies</h3>
-        <li>Traditional Chinese Tea</li>
-        <li>Architecture & Design</li>
-        <li>The Critically Acclaimed MMORPG Final Fantasy XIV With Newly Expanded Free Trial Through All Of "A Realm Reborn" And Including The Award Winning "Heavensward" Expansion With Unlimited Playtime Through Level 60 Sign Up And Join Eorzea Today!</li>
-        <li>Cocktail Mixology</li>
-        <hr>
-        <h3>Links To Shtuff</h3>
-        <li><a href="https://youtu.be/qOupwLP3K3s">A Cool Animation I Made For ATLS 4809</a></li>
-        <li><a href="https://caseyjpaul.github.io/2200.github.io/">Casey Paul web page</a></li>
+    <div id="top-bar">
+        <div id="logo"><img src="rsc/img/Brick-Ai-V2-cream.png" alt="" style="max-height:100%;"></div>
+        <div id="name">CASEY GOSSETT</div>
+        <div id="nav-bar">
+            <hr>
+            <div id="nav-bar-items">
+                <div class="nav-dropdown">
+                    <span>ATLS 2200</span>
+                    <div class="nav-dropdown-content">
+                        <a href="ex3.html">EX3</a>
+                        <hr>
+                        <a href="chess.html">CHESS</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <span>PPROJECTS</span>
+                    <div class="nav-dropdown-content">
+                        <a href="">NARROW ESCAPE</a>
+                        <hr>
+                        <a href="">C7OSURE</a>
+                        <hr>
+                        <a href="">FULCRUM</a>
+                        <hr>
+                        <a href="">TEA HOUSE</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <span>ART GALLERY</span>
+                    <div class="nav-dropdown-content">
+                        <a href="art-gallery/graphics.html">GRAPHICS</a>
+                        <hr>
+                        <a href="art-gallery/3d-modeling.html">3D MODELING</a>
+                        <hr>
+                        <a href="art-gallery/game-photography.html">GAME PHOTOGRAPHY</a>
+                        <hr>
+                        <a href="art-gallery/sketches.html">SKETCHES</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="background">
+        <img src="rsc/img/img2.png" alt="" style="height:100%; object-fit:fill; opacity: 50%;">
+    <div id="content">
+
     </div>
 </body>
 </html>
