@@ -8,25 +8,26 @@
     <style>
         body {
             margin: 0px;
+            min-height: 100vh;
         }
         ul {
             list-style-type: none;
         }
         #gallery {
+            width: 100%;
+            height: 100%;
             display: flex;
-            width: 100vw;
-            min-height: 100vh;
             justify-content: center;
             align-items: center;
             background-color: black;
         }
         #gallery > #gallery-li{
             margin: 0px;
-            width: 100%;
-            height: 100%;
+            width: 90%;
+            height: 90%;
             display: grid;
-            grid-template-rows: repeat(3,minmax(300px,600px));
-            grid-template-columns: repeat(auto-fill,minmax(300px,600px));
+            grid-template-rows: repeat(5,800px);
+            grid-template-columns: repeat(auto-fit,800px);
             grid-auto-flow: dense;
             justify-content: center;
         }
@@ -49,12 +50,12 @@
             opacity: 0.5;
         }
         #signature {
-            width: 200px;
+            width: 400px;
             transform-origin: bottom left;
             transform: rotate(-90deg);
             position: fixed;
-            bottom: 50px;
-            right: -150px;
+            bottom: 100px;
+            right: -300px;
         }
         #signature img{
             width: 100%;
@@ -101,6 +102,6 @@
             </figure></li>
         </ul>
     </div>
-    <div id="signature"><img src="../rsc/img/Brickwork-cream-nameonly.png" alt=""></div>
+    <div id="signature"><a href="../index.html"><img src="../rsc/img/Brickwork-cream-nameonly.png" alt=""></a></div>
 </body>
 </html>
