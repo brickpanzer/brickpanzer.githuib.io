@@ -5,158 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casey Gossett</title>
-    <style>
-        @font-face {
-            font-family: "i-collect-it";
-            src: url(rsc/typ/icollect-it.otf);
-        }
-        @font-face {
-            font-family: "Ferrite-Core-DX";
-            src: url(rsc/typ/FerriteCoreDX-Display.otf);
-            font-weight: bold;
-            font-style: normal;
-        }
-        @font-face {
-            font-family: "Ferrite-Core-DX";
-            src: url(rsc/typ/FerriteCoreDX-Light.otf);
-            font-weight: lighter;
-            font-style: normal;
-        }
-        body {
-            margin: 0px;
-        }
-        hr {
-            color: #FFFBE3;
-            width: 100%;
-        }
-        #top-bar {
-            width: 100vw;
-            height: 200px;
-            display: flex;
-            flex-direction: row;
-            z-index: 1;
-        }
-        #logo {
-            height: 300px;
-            position: fixed;
-            top: 0px;
-            left: 0px;
-            margin: 20px;
-            z-index: 1;
-        }
-        #name {
-            font-family: "i-collect-it";
-            font-size: 200px;
-            color: #FFFBE3;
-            position: relative;
-            top: -30px;
-            left: 250px;
-        }
-        #nav-bar {
-            height: 100px;
-            width: 80vw;
-            position: fixed;
-            top: 160px;
-            left: 250px;
-            z-index: 2;
-        }
-        #nav-bar-items {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-        .nav-dropdown {
-            position: relative;
-            display: inline-block;
-            font-family: "Ferrite-Core-DX";
-            font-weight: bold;
-            color: #FFFBE3;
-            font-size: 30px;
-            letter-spacing: 3px;
-        }
-        .nav-dropdown-content{
-            display: none;
-            position: absolute;
-        }
-        .nav-dropdown:hover .nav-dropdown-content{
-            display: flex;
-            flex-direction: column;
-        }
-        .nav-dropdown-content a{
-            color: #FFFBE3;
-            text-decoration: none;
-            font-weight: lighter;
-            letter-spacing: -2px;
-        }
-        .nav-dropdown-content a:visited{
-            color: #aba793;
-        }
-        .nav-dropdown-content a:hover{
-            color: #FEE031;
-        }
-        #background {
-            background-color: black;
-            position: fixed;
-            top: 0px;
-            left: 0px;
-            height: 100vh;
-            width: 100vw;
-            z-index: -1;            
-        }
-        #content {
-            width: 100vw;
-            min-height: 100vh;
-            position: fixed;
-            top: 0px;
-            left: 0px;
-            z-index: 0;
-        }
-        #signature {
-            width: 200px;
-            transform-origin: bottom left;
-            transform: rotate(-90deg);
-            position: fixed;
-            bottom: 50px;
-            right: -150px;
-        }
-        #signature img{
-            width: 100%;
-            height: 100%;
-            object-fit: fill;
-        }
-        @media only screen and (max-width: 1280px), screen and (max-height: 720px) {
-            #top-bar {
-                height: 100px;
-            }
-            #logo {
-                height: 150px;
-                margin: 10px;
-            }
-            #name {
-                font-size: 100px;
-                top: -15px;
-                left: 125px;
-            }
-            #nav-bar {
-                height: 50px;
-                top: 80px;
-                left: 125px;
-            }
-            .nav-dropdown {
-                font-size: 15px;
-                letter-spacing: 1.5px;
-            }
-            .nav-dropdown-content a{
-                letter-spacing: -1px;
-            }
-            #signature {
-                width: 100px;
-                bottom: 25px;
-                right: -75px;
-            }    
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="rsc/css/index.css">
 </head>
 <body>
     <div id="top-bar">
@@ -168,9 +17,11 @@
                 <div class="nav-dropdown">
                     <span>ATLS 2200</span>
                     <div class="nav-dropdown-content">
-                        <a href="ex3.html">EX3</a>
+                        <a href="/atls-2200/ex3.html">EX3</a>
                         <hr>
-                        <a href="chess.html">CHESS</a>
+                        <a href="/atls-2200/chess.html">CHESS</a>
+                        <hr>
+                        <a href="/atls-2200/ex5.html">EX5</a>
                     </div>
                 </div>
                 <div class="nav-dropdown">
