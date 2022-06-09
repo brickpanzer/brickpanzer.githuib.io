@@ -11,6 +11,7 @@ body{
 }
 .g {
     color: red;
+    font-size: 3vw;
 }
 .h1-1 {
     margin: 0px;
@@ -24,6 +25,10 @@ body{
 .r {
     margin: 0px;
     font-size: 3.5vw;
+}
+.red-overide {
+    color:#cf0202;
+    font-size: 2vw;
 }
 #em1 {
     margin: 0px;
@@ -44,5 +49,67 @@ body{
     letter-spacing: 1vw;
     line-height: 3vh;
     text-align: center;
+}
+#p2 {
+    margin: 0px;
+    padding-top: 6vh;
+    font-size: 1.5vw;
+    color: white;
+    line-height: 3vh;
+}
+#p3 {
+    margin: 0px;
+    padding-top: 6vh;
+    font-size: 1.5vh;
+    color: white;
+    line-height: 5vh;
+}
+#r1 {
+    color: #160202;
+}
+#r2 {
+    color: #1e0202;
+}
+#r3 {
+    color: #360505;
+}
+#r4 {
+    color: #971616;
+}
+#r5 {
+    color: #ae0000;
+}
+#r6 {
+    color: #cf0202;
+}
+#q1 {
+    color: #0e0e0e;
+}
+#q2 {
+    color: #222222;
+}
+#q3 {
+    color: #414141;
+}
+#q4 {
+    color: #545454;
+}
+#q5 {
+    color: #bdbdbd;
+}
+#q6 {
+    color: #f1f1f1;
+}
+h4 {
+    margin: 0px;
+    padding-top: 7vh;
+    color: white;
+    font-size: 1vw;
+}
+h5 {
+    margin: 0px;
+    padding-bottom: 5vh;
+    color: white;
+    font-size: 0.7vw;
 }
 
