@@ -1,19 +1,142 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body {
     width: 100vw;
+    height: 100vh;
     margin: 0px;
     position: fixed;
     top:0px;
     left:0px;
     font-family: 'Poppins',sans-serif;
 }
-#header {
+hr {
     width: 100%;
+}
+#header {
+    position:sticky;
+    margin: 0px;
+    padding-left: 5vw;
+    padding-right: 5vw;
     text-align: right;
+    background-color: white;
+    z-index: 1;
+}
+#header > h1 {
+    margin: 0px;
+    font-size: 5vw;
+    font-weight: 700;
+}
+#header > h4 {
+    margin: 0px;
+    font-size: 1.5vw;
+    font-weight: 300;
+    font-style: italic;
+}
+#header > h6 {
+    margin: 0px;
+    font-size: 1vw;
+    font-weight: 500;
 }
 #content {
-    top: 0px;
-    left: 0px;
+    height: 80vh;
+    margin: 0px;
+    padding-left: 5vw;
+    padding-right: 5vw;
     display: flex;
     flex-direction: row;
+    overflow: scroll;
+}
+#left-column {
+    height: 100%;
+    margin: 0px;
+    padding:0 2vw 0 0;
+    display: flex;
+    flex-direction: column;
+}
+#right-column {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#left-column > h3 {
+    margin: 0px;
+    font-size: 2vw;
+    font-weight: 800;
+    font-style: italic;
+    display: flex;
+}
+#left-column > h2 {
+    margin: 0px;
+    font-weight: 700;
+    font-size: 3vw;
+    letter-spacing: 0.1vw;
+}
+#left-column > h5 {
+    margin: 0px;
+    font-size: 2.5vw;
+    font-weight: 400;
+}
+#left-column > p {
+    margin: 0px;
+    padding-left: 2vw;
+    padding-bottom: 50px;
+    font-weight: 400;
+}
+#soft {
+    list-style: none;
+}
+#soft > li {
+    margin: 0px;
+    padding-bottom: 1vh;
+    font-size: 1.5vw;
+    font-weight: 300;
+    font-style: italic;
+}
+#soft > li::before {
+    content: "➔";
+    padding-right: 0.5vw;
+}
+#hard {
+    list-style: none;
+}
+#hard > li {
+    margin: 0px;
+    padding-bottom: 1vh;
+    font-size: 1.8vw;
+    font-weight: 500;
+}
+#hard > li::before {
+    content: "ᐅ";
+    padding-right: 0.5vw;
+}
+#right-column > h2 {
+    margin: 0px;
+    font-weight: 700;
+    font-size: 3vw;
+    letter-spacing: 0.1vw;
+}
+#experience {
+    margin: 0px;
+    font-size: 2vw;
+    line-height: 25px;
+    font-weight: 600;
+    font-style: italic;
+    list-style: none;
+}
+#experience > li::before{
+    content: "ᐅ";
+    padding-right: 0.5vw;
+}
+.subheader {
+    font-size: 1.8vw;
+    font-weight: 300;
+}
+.sublist {
+    margin: 0px;
+    font-size: 1.3vw;
+    font-weight: 200;
+    list-style: none;
+}
+.sublist > li::before{
+    content: "►";
+    padding-right: 0.5vw;
 }
