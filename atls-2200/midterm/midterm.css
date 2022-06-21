@@ -1,8 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
+/* animations */
+
+@keyframes fade_out {
+    from {opacity: 1.0;}
+    to {opacity: 0.0;}
+}
+@keyframes fade_in {
+    from {opacity: 0.0;}
+    to {opacity: 1.0;}    
+}
+@keyframes fade_in_alt {
+    from {opacity: 0.0;}
+    to {opacity: 0.8;}    
+}
+
+/* boilerplate */
+
 body{
     margin: 0;
-    background-color: #1d1e22;
-    height: 1080px;
-    width: 1920px;
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+}
+audio{
+    position: fixed;
+    top: 0px;
+    z-index: 11;
 }
 #test {
     position: relative;
@@ -14,4 +37,142 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-position: 50% 50%;
+}
+#cover {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    background-color: black;
+    z-index: 10;
+    animation: fade_out 6s ease-out 0.5s 1 normal forwards;
+}
+#blank_bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 60vw;
+    height: calc((9/16) * 60vw);
+    background-color: black;
+    z-index: 0;
+}
+
+/* main code here */
+#table {
+    background-image: url("table.png");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+/* background */
+#level_4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 60vw;
+    height: calc((9/16) * 60vw);
+    background-image: url("nebula.jpg");
+    background-size:contain;
+    z-index: 1;
+    animation: fade_in 6s ease-out 12s 1 normal both;    
+}
+/* middleground */
+#level_3 {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%,-50%);
+    width: 60vw;
+    height: calc((9/16) * 60vw);
+    background-image: url("ship2.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    z-index: 2;
+    opacity: 0.8;
+    animation: fade_in_alt 6s ease-out 18s 1 normal both;   
+}
+/* Page */
+#level_2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90vw;
+    height: calc((9/16) * 90vw);
+    background-image: url("Page-Render.png");
+    background-size:contain;
+    z-index: 3;
+}
+/* top */
+#level_1 {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%,-50%);
+    width: 50vw;
+    height: calc((9/16) * 50vw);
+    background-image: url("ship3.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    z-index: 4;
+    opacity: 0.8;
+    animation: fade_in_alt 6s ease-out 34s 1 normal both;    
+}
+
+#text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70vw;
+    height: calc((9/16) * 70vw);;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+}
+
+#text > h1{
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 2vw;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#t1 {
+    animation: fade_in 2s ease-in-out 4s 1 normal both,
+               fade_out 2s ease-in-out 7s 1 normal forwards;
+}
+#t2 {
+    animation: fade_in 2s ease-in-out 11s 1 normal both,
+               fade_out 2s ease-in-out 17s 1 normal forwards;
+}
+#t3 {
+    animation: fade_in 2s ease-in-out 20s 1 normal both,
+               fade_out 2s ease-in-out 29s 1 normal forwards;
+}
+#t4 {
+    animation: fade_in 2s ease-in-out 23s 1 normal both,
+               fade_out 2s ease-in-out 29s 1 normal forwards;
+}
+#t5 {
+    animation: fade_in 2s ease-in-out 26s 1 normal both,
+               fade_out 2s ease-in-out 29s 1 normal forwards;
+}
+#t6{
+    animation: fade_in 2s ease-in-out 32s 1 normal both,
+               fade_out 2s ease-in-out 36s 1 normal forwards;
+}
+#t7{
+    animation: fade_in 2s ease-in-out 38s 1 normal both;
+}
+#t8{
+    font-size: 4vw;
+    animation: fade_in 2s ease-in-out 41s 1 normal both;
 }
