@@ -73,7 +73,7 @@ audio{
     transform: translate(-50%,-50%);
     width: 60vw;
     height: calc((9/16) * 60vw);
-    background-image: url("nebula.jpg");
+    background-image: url("p2-bg.png");
     background-size:contain;
     z-index: 1;
     /* animation: fade_in 6s ease-out 12s 1 normal both;     */
@@ -86,13 +86,13 @@ audio{
     transform: translate(-50%,-50%);
     width: 60vw;
     height: calc((9/16) * 60vw);
-    background-image: url("flint1.png");
+    background-image: url("");
     background-size:contain;
     background-repeat: no-repeat;
     background-position: 50%;
     z-index: 2;
     opacity: 0.8;
-    animation: fade_in_alt 6s ease-out 3s 1 normal both;
+    /* animation: fade_in_alt 6s ease-out 3s 1 normal both; */
 }
 /* Page */
 #level_2 {
@@ -110,17 +110,17 @@ audio{
 #level_1 {
     position: absolute;
     top: 50%;
-    left: 60%;
+    left: 50%;
     transform: translate(-50%,-50%);
-    width: 50vw;
-    height: calc((9/16) * 50vw);
-    background-image: url("flint2.png");
+    width: 60vw;
+    height: calc((9/16) * 60vw);
+    background-image: url("p2-fg.png");
     background-size:contain;
     background-repeat: no-repeat;
     background-position: 50%;
     z-index: 4;
     opacity: 0.9;
-    animation: fade_in_alt 3s ease-out 10s 1 normal both;    
+    /* animation: fade_in_alt 3s ease-out 10s 1 normal both;     */
 }
 
 #text {
@@ -159,17 +159,9 @@ audio{
                fade_out 2s ease-in-out 5s 1 normal forwards;
 }
 #t2 {
-    animation: fade_in 2s ease-in-out 9s 1 normal both;
+    animation: fade_in 2s ease-in-out 8s 1 normal both;
 }
 #t3 {
     font-size: 3vw;
-    animation: fade_in 2s ease-in-out 12s 1 normal both;
-}
-#t4 {
-    font-size: 3vw;
-    animation: fade_in 2s ease-in-out 13s 1 normal both;
-}
-#t5 {
-    font-size: 4vw;
-    animation: fade_in 2s ease-in-out 14s 1 normal both;
+    animation: fade_in 2s ease-in-out 10s 1 normal both;
 }
