@@ -10,12 +10,39 @@ let canvas;
 let context;
 let dateObj;
 let gameSpeed = 1.0;
+let score = 0;
 let maxWidth = 0;
 let maxHeight = 0;
 let astroids = [];
+let failState = false;
 
 document.onmousemove = updateMousePos;
-setInterval(newAsteroid,350);
+setInterval(addAstroid,350);
+setInterval(gameDifficulty,60000);
+setInterval(scoreKeeper,1000);
+
+function gameDifficulty(){
+    if(gameSpeed < 6 && !failState){
+        gameSpeed++;
+    }
+}
+function addAstroid(){
+    if(!failState){
+        for(let i = 0; i < gameSpeed; i++){
+            newAsteroid();
+        }
+    }
+}
+
+function scoreKeeper(){
+    if(!failState){
+        score++;
+        document.querySelector('#score').innerHTML = ("SCORE:" + score);
+    }
+}
+function endGame(){
+
+}
 
 // generate new asteroid
 function newAsteroid(){
@@ -33,20 +60,20 @@ function newAsteroid(){
     // generate random x/y pos
     switch(wall){
         case 0:
-            rand_y = 0.0;
+            rand_y = -80.0;
             rand_x = Math.random() * canvas.width;
             break;
         case 1:
             rand_y = Math.random() * canvas.height;
-            rand_x = canvas.width;
+            rand_x = canvas.width + 80.0;
             break;
         case 2:
-            rand_y = canvas.height;
+            rand_y = canvas.height + 80.0;
             rand_x = Math.random() * canvas.width;
             break;
         case 3:
             rand_y = Math.random() * canvas.height;
-            rand_x = 0.0;
+            rand_x = -80.0;
             break;
     };
     // calculate x/y speed (should result in normal vector)
@@ -91,13 +118,19 @@ function updateMousePos(event){
 // - if coliding, send game end signal
 // - if no collisions, move asteroids
 function handleAstroids(){
-    context.fillStyle = 'black';
     for(let i = 0; i < astroids.length; i++){
-        // update pos
+        context.fillStyle = 'rgb(66,66,66)';
+        // create var
         let ast_x = astroids[i][0];
         let ast_y = astroids[i][1];
         let spd_x = astroids[i][2];
         let spd_y = astroids[i][3];
+        let collisionDist = Math.sqrt(Math.pow((ast_x - pilotData.x),2) + Math.pow((ast_y - pilotData.y),2))
+                                      - (astroids[i][4] + 10);
+        if(collisionDist <= 1){
+            context.fillStyle = 'red';
+            failState = true;
+        }
         astroids[i][0] += spd_x * gameSpeed;
         astroids[i][1] += spd_y * gameSpeed;
         context.beginPath();
@@ -127,16 +160,43 @@ function draw(){
     maxWidth = canvas.width;
     maxHeight = canvas.height;
     context.clearRect(0,0,canvas.width,canvas.height);
+    //color based on difficulty
+    switch(gameSpeed){
+        case 1:
+            context.fillStyle = 'rgb(28,54,63)';
+            break;
+        case 2:
+            context.fillStyle = 'rgb(28,63,45)';
+            break;
+        case 3:
+            context.fillStyle = 'rgb(63,54,28)';
+            break;
+        case 4:
+            context.fillStyle = 'rgb(50,28,63)';
+            break;
+        case 5:
+            context.fillStyle = 'rgb(54,12,15)';
+            break;
+        case 6:
+            context.fillStyle = 'rgb(11,11,11)';
+            break;
+    }
+    // fill background
+    context.fillRect(0,0,canvas.width,canvas.height);
     // move ship
     shipLerp();
     // move astroids
     handleAstroids();
     // draw items
-    context.fillStyle = 'red';
+    context.fillStyle = 'white';
     context.beginPath();
     context.arc(pilotData.x,pilotData.y,10,0,2 * Math.PI);
     context.fill();
-    requestAnimationFrame(draw);
+    if(!failState){
+        requestAnimationFrame(draw);
+    } else {
+        endGame();
+    }
 }
 
 function loadGame(){
