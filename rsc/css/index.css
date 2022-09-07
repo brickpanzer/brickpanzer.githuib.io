@@ -4,7 +4,7 @@
 }
 @font-face {
     font-family: "Ferrite-Core-DX";
-    src: url(../typ/FerriteCoreDX-Display.otf);
+    src: url(../typ/FerriteCoreDX-Medium.otf);
     font-weight: bold;
     font-style: normal;
 }
@@ -46,7 +46,7 @@ hr {
 }
 #nav-bar {
     height: 100px;
-    width: 80vw;
+    width: 50vw;
     position: fixed;
     top: 160px;
     left: 250px;
@@ -147,4 +147,16 @@ hr {
         bottom: 25px;
         right: -75px;
     }    
+}
+
+@media only screen and (orientation: portrait) {
+    #nav-bar{
+        height: 20vh;
+    }
+    #nav-bar-items{
+        flex-direction: column;
+    }
+    .nav-dropdown:hover, .nav-dropdown:active {
+        margin-bottom: 20vh;
+    }
 }
